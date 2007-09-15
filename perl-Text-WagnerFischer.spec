@@ -1,7 +1,7 @@
 %define module  Text-WagnerFischer
 %define name    perl-%{module}
 %define version 0.04
-%define release %mkrel 5
+%define release %mkrel 6
 
 Name:           %{name}
 Version:        %{version}
