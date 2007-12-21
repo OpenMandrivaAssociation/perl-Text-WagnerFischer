@@ -15,6 +15,7 @@ Source:         http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.
 BuildRequires:  perl-devel
 %endif
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This module implements the Wagner-Fischer dynamic programming technique, used
