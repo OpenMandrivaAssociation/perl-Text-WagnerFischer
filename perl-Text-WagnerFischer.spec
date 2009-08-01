@@ -1,21 +1,21 @@
-%define module  Text-WagnerFischer
-%define name    perl-%{module}
-%define version 0.04
-%define release %mkrel 8
+%define upstream_name    Text-WagnerFischer
+%define upstream_version 0.04
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-Summary:        An implementation of the Wagner-Fischer edit distance
-License:        GPL or Artistic
-Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Text/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    An implementation of the Wagner-Fischer edit distance
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements the Wagner-Fischer dynamic programming technique, used
@@ -25,7 +25,7 @@ operations of substitutions, deletions or insertions needed to transform the
 string into the other one (and vice versa).
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,10 +41,8 @@ make test
 %clean 
 rm -rf %{buildroot}
 
-
 %files
 %defattr(-,root,root)
 %doc Changes README
 %{perl_vendorlib}/Text
 %{_mandir}/*/*
-
