@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	An implementation of the Wagner-Fischer edit distance
 License:	GPL+ or Artistic
