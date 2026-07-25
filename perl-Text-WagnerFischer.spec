@@ -2,14 +2,14 @@
 %define upstream_version 0.04
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	An implementation of the Wagner-Fischer edit distance
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/Text-WagnerFischer
+Source0:	https://cpan.metacpan.org/authors/id/D/DA/DAVIDEBE/Text-WagnerFischer-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
