@@ -1,15 +1,13 @@
 %define upstream_name    Text-WagnerFischer
-%define upstream_version 0.04
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.04
+Release:	6
 
 Summary:	An implementation of the Wagner-Fischer edit distance
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Text-WagnerFischer
-Source0:	https://cpan.metacpan.org/authors/id/D/DA/DAVIDEBE/Text-WagnerFischer-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DA/DAVIDEBE/Text-WagnerFischer-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ operations of substitutions, deletions or insertions needed to transform the
 string into the other one (and vice versa).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -43,9 +41,7 @@ make test
 %changelog
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.40.0-1mdv2010.0
 + Revision: 405717
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.04-8mdv2009.0
+- rebuild using %0.04 Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.04-8mdv2009.0
 + Revision: 242063
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
