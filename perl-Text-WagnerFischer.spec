@@ -2,7 +2,7 @@
 %define upstream_version 0.04
 Name:		perl-%{upstream_name}
 Version:	0.04
-Release:	2
+Release:	3
 
 Summary:	An implementation of the Wagner-Fischer edit distance
 License:	GPL+ or Artistic
